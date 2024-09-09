@@ -1,0 +1,23 @@
+<mvc:View controllerName="projectcrudop.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    >
+    <Page id="page" title="{i18n>title}">
+        <content>
+        
+        <Toolbar>
+            <Title text="Home"/>
+            <Button text="Login"/>
+            <Button text="Register"/>
+        </Toolbar>
+        <ToolbarSpacer/>
+            <VBox id="container">
+           
+            </VBox>
+            <VBox id="detailscontainer" >
+            </VBox>
+        </content>
+    </Page>
+</mvc:View>
+ 

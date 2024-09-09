@@ -1,0 +1,63 @@
+<core:FragmentDefinition
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m"
+>
+    <Panel>
+        <VBox alignItems="End">
+            <SearchField search="searchEmp" />
+        </VBox>
+        <VBox alignItems="End">
+            <Button
+                type="Transparent"
+                press="onAdd"
+                icon="sap-icon://add"
+            />
+        </VBox>
+        <VBox >
+     
+        </VBox>
+        <Table
+            id="employeeTable"
+            items="{path:'/employees',
+ sorter:{
+    path:'id',
+    group:true
+ }}"
+        >
+            <columns>
+                <Column>
+                    <Text text="Employee ID" />
+                </Column>
+                <Column>
+                    <Text text="Employee Name" />
+                </Column>
+
+                <Column />
+                <Column />
+            </columns>
+
+            <items>
+                <ColumnListItem>
+                    <cells>
+                        <Text text="{id}" />
+
+                        <Text text="{name}" />
+
+                        <HBox class="sapUiResponsiveMargin">
+                            <Button
+                                type="Transparent"
+                                press="onModify"
+                                icon="sap-icon://edit"
+                            />
+                            <Button
+                                type="Transparent"
+                                press="onDelete"
+                                icon="sap-icon://delete"
+                            />
+                        </HBox>
+                    </cells>
+                </ColumnListItem>
+            </items>
+        </Table>
+    </Panel>
+</core:FragmentDefinition>

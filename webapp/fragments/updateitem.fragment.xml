@@ -1,0 +1,21 @@
+
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m">
+<Dialog id="dialog2">
+
+<Bar >
+<contentRight>
+<Button   icon="sap-icon://decline" press="close2"/>
+
+
+</contentRight>
+</Bar>
+
+<VBox class="sapUiResponsiveMargin">
+<Label text="Edit Name" />
+<Input id="inputName1" placeholder="enter employee name"/>
+<Label text="Edit Id" />
+<Input id="inputId1" placeholder="enter employee ID"/>
+<Button  press="update" text="Update"/>
+</VBox>
+</Dialog>
+</core:FragmentDefinition>
