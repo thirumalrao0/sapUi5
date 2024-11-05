@@ -1,0 +1,27 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m">
+<Dialog>
+   <Table items="{sun>/Raj}" mode="MultiSelect" id="table1">
+                <columns>
+                    <Column>
+                        <Text text="Name " />
+                    </Column>
+                    <Column>
+                        <Text text="Age" />
+                    </Column>
+                </columns>
+                <ColumnListItem>
+                    <cells>
+                        <Text text="{sun>name}" />
+                        <Text text="{sun>age}" />
+                    </cells>
+                </ColumnListItem>
+     </Table>
+     <List items="{sun>/Raj}" mode="MultiSelect" id="list1">
+     <items>
+     <StandardListItem title="{sun>name}"/>
+     </items>
+     </List>
+     <Button text="ok" press="onOk"/>
+     <Button text="cancel" press="onCancel"/>
+</Dialog>
+</core:FragmentDefinition>

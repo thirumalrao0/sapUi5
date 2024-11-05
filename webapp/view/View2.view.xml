@@ -1,0 +1,29 @@
+<mvc:View
+    controllerName="projectcrudop.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    displayBlock="true">
+
+    <Page showNavButton="true" navButtonPress=".onNavBack">
+        <content>
+             <VBox class="sapUiSmallMargin">
+                <!-- First Date and Time Picker -->
+                <Label text="Select Start Date:" />
+                <DatePicker id="dateId1" />
+                <Label text="Select Start Time:" />
+                <TimePicker id="timeId1" />
+
+                <!-- Second Date and Time Picker -->
+                <Label text="Select End Date:" />
+                <DatePicker id="dateId2" />
+                <Label text="Select End Time:" />
+                <TimePicker id="timeId2" />
+
+                <Button
+                    text="Check Dates"
+                    press=".check" />
+            </VBox>
+        </content>
+    </Page>
+</mvc:View>

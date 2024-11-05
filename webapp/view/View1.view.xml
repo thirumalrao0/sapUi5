@@ -1,23 +1,82 @@
-<mvc:View controllerName="projectcrudop.controller.View1"
-    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+<mvc:View
+    controllerName="projectcrudop.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
     xmlns="sap.m"
     xmlns:core="sap.ui.core"
+>
+    <Page
+        id="page"
+        title="{i18n>title}"
     >
-    <Page id="page" title="{i18n>title}">
         <content>
-        
-        <Toolbar>
-            <Title text="Home"/>
-            <Button text="Login"/>
-            <Button text="Register"/>
-        </Toolbar>
-        <ToolbarSpacer/>
-            <VBox id="container">
-           
+            <VBox class="sapUiSmallMargin">
+                <Label text="Start Date:" />
+                <DatePicker id="startDatePicker" />
+
+                <Label text="End Date:" />
+                <DatePicker id="endDatePicker" />
+
+                <Label text="Select Frequency:" />
+                <Select
+                    id="frequencySelectControl"
+                    change=".onFrequencyChange"
+                >
+                    <items>
+                        <core:Item
+                            key="day"
+                            text="Daily"
+                        />
+                        <core:Item
+                            key="week"
+                            text="Weekly"
+                        />
+                        <core:Item
+                            key="month"
+                            text="Monthly"
+                        />
+                    </items>
+                </Select>
+
+                <Button
+                    id="calculateButton"
+                    text="Calculate"
+                    press=".onCalculatePress"
+                />
+
+                <List
+                    id="frequencyListControl"
+                    class="sapUiSmallMarginTop"
+                >
+                    <items>
+                        <StandardListItem
+                            title="{title}"
+                            description="{description}"
+                        />
+                    </items>
+                </List>
             </VBox>
-            <VBox id="detailscontainer" >
+            <MultiInput
+                id="multiInput"
+                valueHelpRequest="onValueHelpRequested"
+                showValueHelp="true"
+            />
+            <VBox class="sapUiSmallMargin">
+                <Label text="Select First Date:" />
+                <DateTimePicker id="yourDateTimePickerId1" />
+
+                <Label text="Select Second Date:" />
+                <DateTimePicker id="yourDateTimePickerId2" />
+
+                <Button
+                    text="Compare Dates"
+                    press=".onGetDateTime"
+                />
             </VBox>
+            <Button
+                text="Go to Next Page"
+                press=".navToNextpage"
+            />
         </content>
     </Page>
 </mvc:View>
- 

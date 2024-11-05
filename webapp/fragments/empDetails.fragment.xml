@@ -2,7 +2,7 @@
     xmlns:core="sap.ui.core"
     xmlns="sap.m"
 >
-    <Panel>
+    <Dialog>
         <VBox alignItems="End">
             <SearchField search="searchEmp" />
         </VBox>
@@ -17,7 +17,7 @@
      
         </VBox>
         <Table
-            id="employeeTable"
+           
             items="{path:'/employees',
  sorter:{
     path:'id',
@@ -59,5 +59,6 @@
                 </ColumnListItem>
             </items>
         </Table>
-    </Panel>
+        <Button text="close" press="close"/>
+    </Dialog>
 </core:FragmentDefinition>
